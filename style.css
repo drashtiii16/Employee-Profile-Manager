@@ -1,0 +1,319 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    padding: 10px 30px;
+}
+.header h5{
+    font-weight: bold;
+    font-size: 27px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+
+/* upper-btn-box */
+.upper-btn-box{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    padding: 30px;
+}
+
+.upper-btn-box .left-box{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.upper-btn-box .left-box input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+.upper-btn-box .left-box button, .upper-btn-box .right-box button{
+    border: none;
+    outline: none;
+    background-color: black;
+    padding: 13px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.upper-btn-box .right-box{
+    width: 50%;
+    height: 100%;
+}
+
+.upper-btn-box .right-box i{
+    font-size: 25px;
+    color: black;
+    padding: 10px;
+}
+
+.upper-btn-box .right-box input{
+    padding: 13px;
+    border: none;
+    outline: none;
+    width: 70%;
+    border-bottom: 3px solid black;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+/* table code */
+.table-box{
+    padding: 30px;
+    width: 100%;
+}
+.table-box table{
+    width: 100%;
+    border: 1px solid black;
+}
+.table-box table tr th{
+    border-right: 1px solid black;
+    padding: 30px 0px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+.table-box table tr td{
+    border-right: 1px solid black;
+    padding: 10px 0px 5px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 1px solid black;
+}
+.table-box table tr td button{
+    width: 40%;
+    padding: 5px 0px 5px;
+    border: none;
+    outline: none;
+    background-color: black;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+/* modal code */
+
+.modal{
+    width: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    background-color: #f2f2f2;
+    transform: translate(-50%,-50%);
+    display: flex;
+    border-top: 20px groove black;
+    opacity: 0;
+    z-index: -1;
+}
+.modal.active{
+    opacity: 1;
+    z-index: 1;
+    width: 70%;
+}
+.modal .close-icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+    padding: 10px;
+}
+.modal .left-modal{
+    width: 30%;
+    height: 100%;;
+}
+.modal .left-modal .img-box{
+    width: 100%;
+    height: 300px;
+    background-color: #f2f2f2;
+    display: flex;
+    padding: 30px;
+    position: relative;
+}
+.modal .left-modal .img-box input{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    top:90px;
+    opacity: 0;
+}
+.modal .left-modal .img-box i{
+    font-size: 30px;
+    padding: 10px;
+    position: absolute;
+    right: 40px;
+    top:90px;
+    color:black;
+}
+.modal .left-modal .img-box img{
+    border-radius: 50%;
+    height: 250px;
+    width: 100%;
+
+}
+
+.modal .right-modal{
+    width: 70%;
+    height: 100%;
+    border-left: 5px groove black;
+    padding: 30px;
+}
+
+.modal .right-modal .input-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.modal .right-modal .input-box label{
+    font-size: 22px;
+    font-weight: bold;
+    font-family:sans-serif;
+    margin: 20px 0px;
+}
+.modal .right-modal .input-box input{
+    width: 70%;
+    margin: 10px 0px;
+    border: none;
+    padding: 13px;
+    outline: none;
+    border-bottom: 3px solid black;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.modal .right-modal .input-box button{
+    border: none;
+    outline: none;
+    background-color: black;
+    padding: 13px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin: 15px 15px;
+    width: 45%;
+}
+
+
+
+/* styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 10px;
+    }
+
+    .upper-btn-box {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+
+    .upper-btn-box .left-box,
+    .upper-btn-box .right-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .upper-btn-box .left-box button,
+    .upper-btn-box .right-box button {
+        margin: 5px 0;
+    }
+
+    .upper-btn-box .left-box button{
+        width: 100%;
+    }
+
+    .upper-btn-box .right-box i {
+        visibility: hidden;
+    }
+
+    .upper-btn-box .right-box button {
+        visibility: hidden;
+    }
+
+    .upper-btn-box .right-box input {
+        width: 100%;
+    }
+
+    .table-box {
+        padding: 10px;
+    }
+
+    .table-box table tr th,
+    .table-box table tr td {
+        padding: 5px 0;
+    }
+
+    .table-box table tr td button {
+        width: 80%;
+        padding: 8px 0;
+    }
+
+    .modal {
+        width: 90%;
+    }
+
+    .modal .left-modal {
+        width: 100%;
+        height: auto;
+    }
+
+    .modal .left-modal .img-box {
+        height: 200px;
+        padding: 20px;
+    }
+
+    .modal .left-modal .img-box i {
+        font-size: 20px;
+        right: 20px;
+        top: 70px;
+    }
+
+    .modal .right-modal {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .modal .right-modal .input-box {
+        flex-direction: column;
+    }
+
+    .modal .right-modal .input-box button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* media query for screens with a maximum width of 400px */
+@media only screen and (max-width: 400px) {
+    .upper-btn-box .left-box button,
+    .upper-btn-box .right-box button {
+        font-size: 16px;
+        padding: 10px;
+        margin-left:5px;
+    }
+
+    .table-box table tr th,
+    .table-box table tr td {
+        font-size: 16px;
+    }
+
+    .modal {
+        width: 95%;
+    }
+}
+
+

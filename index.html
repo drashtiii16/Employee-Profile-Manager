@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Manage</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <h5>Employee Profile Manager</h5>
+    </div>
+    <div class="upper-btn-box">
+        <div class="left-box">
+            <button id="add-btn"><i class="fa fa-plus"></i> Register Employee</button>
+            <button id="del-all-btn"><i class="fa fa-eraser"></i>Delete All</button>
+            <input type="checkbox" id="del-all-box">
+        </div>
+        <div class="right-box">
+            <i class="fa fa-search"></i>
+            <input type="text" id="empId" placeholder="Enter Employee Id/Name">
+            <button>Search</button>
+        </div>
+    </div>
+    <div class="table-box">
+        <table>
+            <tr>
+                <th>Sr No.</th>
+                <th>Profile</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+                <th>Office Code</th>
+                <th>Job Title</th>
+                <th>Action</th>
+            </tr>
+            <tbody id="table-data">
+
+                <tr>
+                    <td>1</td>
+                    <td>Hello</td>
+                    <td>#1</td>
+                    <td>Raj</td>
+                    <td>Patel</td>
+                    <td>rajpatel@gmail.com</td>
+                    <td>123</td>
+                    <td>HR</td>
+                    <td>
+                        <button><i class="fa fa-edit"></i></button>
+                        <button><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td>Hello</td>
+                    <td>#2</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riyapatel@gmail.com</td>
+                    <td>124</td>
+                    <td>Team Lead</td>
+                    <td>
+                        <button><i class="fa fa-edit"></i></button>
+                        <button><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td>Hello</td>
+                    <td>#3</td>
+                    <td>Sakshi</td>
+                    <td>Shah</td>
+                    <td>sakshishah@gmail.com</td>
+                    <td>125</td>
+                    <td>React Developer</td>
+                    <td>
+                        <button><i class="fa fa-edit"></i></button>
+                        <button><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td>Hello</td>
+                    <td>#4</td>
+                    <td>Jiya</td>
+                    <td>Patel</td>
+                    <td>joyapatel@gmail.com</td>
+                    <td>126</td>
+                    <td>Android Developer</td>
+                    <td>
+                        <button><i class="fa fa-edit"></i></button>
+                        <button><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td>Hello</td>
+                    <td>#5</td>
+                    <td>Hetvi</td>
+                    <td>Jariwala</td>
+                    <td>hetvijariwala@gmail.com</td>
+                    <td>127</td>
+                    <td>iOS Developer</td>
+                    <td>
+                        <button><i class="fa fa-edit"></i></button>
+                        <button><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td>Hello</td>
+                    <td>#6</td>
+                    <td>Ishika</td>
+                    <td>Sheth</td>
+                    <td>ishikasheth@gmail.com</td>
+                    <td>128</td>
+                    <td>Angular Developer</td>
+                    <td>
+                        <button><i class="fa fa-edit"></i></button>
+                        <button><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td>Hello</td>
+                    <td>#7</td>
+                    <td>Diya</td>
+                    <td>Patel</td>
+                    <td>diyapatel@gmail.com</td>
+                    <td>129</td>
+                    <td>Full Stack Developer</td>
+                    <td>
+                        <button><i class="fa fa-edit"></i></button>
+                        <button><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr> 
+
+            </tbody>
+        </table>
+    </div>
+    <div class="modal">
+        <i class="fa fa-times-circle close-icon"></i>
+        <div class="left-modal">
+            <div class="img-box">
+                <img src="img/employee.jpeg" id="profile-pic" width="150px" height="150px" alt="">
+                <i class="fa fa-plus"></i>
+                <input type="file" id="upload-field">
+            </div>
+        </div>
+        <div class="right-modal">
+            <form id="register-form">
+                <div class="input-box">
+                    <label for="id">ID</label>
+                    <input type="text" required id="id" autocomplete="off">
+                </div>
+                <div class="input-box">
+                    <label for="name">Name</label>
+                    <input type="text" required id="name" autocomplete="name">
+                </div>
+                <div class="input-box">
+                    <label for="l-name">Last Name</label>
+                    <input type="text" required id="l-name" autocomplete="family-name">
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="text" required id="email" autocomplete="email">
+                </div>
+                <div class="input-box">
+                    <label for="office-code">Office Code</label>
+                    <input type="text" required id="office-code" autocomplete="off">
+                </div>
+                <div class="input-box">
+                    <label for="job-title">Job Ttile</label>
+                    <input type="text" required id="job-title" autocomplete="off">
+                </div>
+                <div class="input-box">
+                    <button id="register-btn">Register</button>
+                    <button id="update-btn" disabled="disabled">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
